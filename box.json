@@ -1,0 +1,68 @@
+{
+	"id": "com.fd.amchartsbar3D",
+	"version": "1.0.0",
+	"name": "amCharts demo bar 3D",
+	"description": "amCharts demo bar 3D",
+	"newInstancePrefix": "Amchartsbar3D", 
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAADtUlEQVR42tVVX0xbVRj/jpgFaJEO2NaVMMjKKHBb7OgKdLrtNpthmrhofNuDbuNhD5AlaiJojDFGHzDhRSEuMXGJf16M0RcTX0x6G12HDUPWLm2hlMFqgXYt/d9S2nuP3720kS1X97I+eJNzz3d+53fO73zfd/4QqPJHxN/4+LiqVCqlpqamhKoITExMXKGU+iYnJx1PXGBsbKxeoVC8j3YQBb6olgcX0INFFFj8/wmMjo7WKZXKS2jbUcBTDYFmFHgT7e9RwFWVEOE2vYBV9XLwOIEPv1voaNVo5lX1T6soUEjm+EQ6X+p/6yXN6hMJ0Xs35s6cM2u5Aa0SeIFSZyBD5lbS7LuvtNsfKzAyMlLX0tJyCf4jyW9fd5w5N9BpM3c2igLg9CdhLpCyJrfCd55pOngDKaoyNSEIwuWPL3YnHgpRZZumDp8viKHYr9wnhSKeKSZS2Z3+XDrWftbcxZ3oVO164I+T24EEm01EYdii404zzRRxYr8bg9mlLfbTN/T2hwQqOYi2nFW/eLKHe773AC3xlPzueQAOb5TNpqJgNes4k7YJSjiT079F7qzEJVyO/9nV/n8EMAdtmIOP0P481HCqYfgkwz3Xe5AWeYHc9ETgljfC5lMxOGXq5p492gSZbZ66VmLEG4xLuBz/y2sWeQ8C+wbVL1gYm6VXDcWSAA7PJjh9YWs+vQUmQ5etq60JKEViMAa+tZiEV/jbRQF+c2/AwnLE+s07rF02Bx56XG0d0nPm7sM0v8OTWc8GuJY32UImDkZGx+naDyAbiWtR4l2LSPhpM8P1dR6iuQJP3IEwuAJh9ocPhuU9mN9m1BYTw+m1aspjTN2BTRTY2BUw9HA9HYdEOvWuhon33q6w2djLGZAvzlXh//zJy/I5cCSPNZiNelvfMY3U6fKvYwlZC9k4nDAyNr12F78bWAe3f13C5fi/Tr0m74HtQYd6sN/AGXVtlOD3p+8+zPvus8VcEkT8ePcRDBClC4tBshd/lH9z+qJ8Dn75S6MeMvVxg4aj0oBZVwBue9bYYj4JIj7Up5UE/nCvkL34Xv7i0hJrv35V1oNcpKDIrGYbv8IzI55MBSE0dKQ+faWGCDX3so1fU0rqpEGE5hF/HXG+zG9FOPsUoQmmMfqtomaHwzd+VnzjKx7ocGE6XISkSsW9CPAqlp/KC2ktF2e5PYAlhPzQXq44HttDWC9j/SNePQnyb5eUmPyZmZmgaIv3VW1tbT22Y+W+ZtFjbOcf5Ypv/PT0dK4yz99R1E83FTcx5QAAAABJRU5ErkJggg==",
+	"vendor": "FD",
+	"eula": "EULA",
+	"license": "2.0",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-fd-amchartsbar3d",
+			"url": "https://fedems.github.io/SACAmbar3D/box/box.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+	"properties": {
+		"value": {
+			"type": "string",
+			"description": "value",
+			"default": ""
+		},
+		"formula": {
+			"type": "string",
+			"description": "formula",
+			"default": ""
+		},
+		"width": {
+			"type": "integer",
+			"default": 50
+		},
+		"height": {
+			"type": "integer",
+			"default": 50
+		}
+	},
+	"methods": {
+		"setValue": {
+			"description": "Sets the Google Sheets Stock value.",
+			"parameters": [
+				{
+					"name": "newValue",
+					"type": "string",
+					"description": "Google Sheets Value"
+				},
+				{
+					"name": "newFormula",
+					"type": "string",
+					"description": "Google Sheets Formula"
+				}
+			],
+			"body": "this.value = newValue; this.formula = newFormula;"
+		},
+		"getValue": {
+			"returnType": "string",
+			"description": "Returns the Google Sheets Stock value.",
+			"body": "return this.value;"
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the Box."
+		}
+	}
+}
